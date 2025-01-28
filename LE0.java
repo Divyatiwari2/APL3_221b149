@@ -22,7 +22,7 @@ class juet{
         return age;
     }
 }
-class Main{
+class LE0{
 public static void main(String args[])  { 
   juet ob1=new juet();
   juet ob2=new juet();
