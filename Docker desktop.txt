@@ -1,0 +1,28 @@
+Docker desktop:
+
+Used so that similar data can be used in different systems like window and mac.
+docker desktop installation
+steps for commands:
+A)To show hello world:
+1.open cmd
+2.docker pull hello-world(create file)
+3.docker run hello-world (open this file)
+
+B) To show ubuntu:
+1.open cmd
+2.docker pull ubuntu
+3.docker run -it ubuntu
+4.(for creating file in it)
+dir
+mkdir juet
+cd juet
+touch emp
+exit
+
+c)To show mongo network with databse:
+1.docker network ls
+2.docker network create mongo-network(create mongo network)
+3.docker network ls
+4.docker run -d -p 27017:27017 --name mongo --network mongo-network -e MONGO_INITDBROOT_VSERNAME=admin -e      MONGO_INITDB_ROOT_PASSWORD=admin mongo
+5.docker network inspect mongo-network
+6.docker run -d -p 8081:8081 --name mongo-express --network mongo-network -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=admin -e ME_CONFIG_MONGODB_URL ="mongodb://admin:admin@mongo:2 7017" mongo-express
